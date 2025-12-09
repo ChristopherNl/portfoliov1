@@ -182,4 +182,18 @@ header .image img{
     border-radius: 10px;
 }
 
+section .header{
+    margin-bottom: 1rem;
+    color: #ffffff;
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 600;
+}
+
+.features{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+}
 
