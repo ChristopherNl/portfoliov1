@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Felipa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap');
 
 @media (max-width: 768px) {
     header {
@@ -35,9 +35,20 @@ a{
 }
 
 body{
-    font-family: 'Felipa', sans-serif;
+
+    font-family: 'Cormorant Garamond', serif;
     background-color: #18181b;
-    
+}
+
+h1, h2{
+    font-family: 'Cinzel', serif;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+p{
+    font-family: 'Cormorant Garamond', serif;
+    opacity: 0.85;
 }
 
 nav{
@@ -88,6 +99,7 @@ nav{
     color: #fff;
     background-color: #570303;
     border-radius: 25px;
+    border-color: #240404;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -123,6 +135,7 @@ header{
 }
 
 header .content h4{
+    font-family: 'Cinzel', serif;
     margin-bottom: 1rem;
     color: #ffffff;
     font-size: 1rem;
@@ -197,3 +210,47 @@ section .header{
     gap: 2rem;
 }
 
+.features .card{
+    background-color: #8a0f06;
+    padding: 2rem;
+    border: 2px solid transparent;
+    border-color: #1f0101;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    
+}
+
+.features .card:hover{
+    border: 2px solid #3b0303;
+    box-shadow:
+        0 0 5px #cecece,
+        0 0 10px #7a1111,
+        0 0 20px #740202,
+        0 0 40px #807474,
+        0 0 80px #2c0101;
+    
+}
+
+.features .card span{
+    display: inline-block;
+    background-color: #fff;
+    padding: 2px 9px;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    border-radius: 5px;
+}
+
+.features .card h4{
+    font-family: 'Cinzel', serif;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    
+}
+
+.features .card p{
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
