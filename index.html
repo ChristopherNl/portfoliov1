@@ -8,7 +8,7 @@
     <title>Portfolio Keith - Web Developer</title>
 </head>
 <body>
-    <!-- NAVIGATION CORRIGÉE ET ACCESSIBLE -->
+    
     <nav role="navigation" aria-label="Navigation principale">
         <div class="nav-logo">
             <a href="#accueil" aria-label="Accueil">
@@ -18,9 +18,9 @@
 
         <ul class="nav-links" id="navLinks" role="menubar" hidden>
             <li class="links"><a href="index.html">Accueil</a></li>
-            <li class="links"><a href="Travaux.html">Mes travaux</a></li>
-            <li class="links"><a href="#services">Tarifs</a></li>
+            <li class="links"><a href="Travaux.html">Mes Projets</a></li>
             <li class="links"><a href="#portfolio">À propos</a></li>
+            <!--- <li class="links"><a href="#services">Tarifs</a></li> -->  
         </ul>
         
         <a href="#contact" class="btn" aria-label="Me contacter">ME CONTACTER</a>
@@ -34,7 +34,7 @@
         </button>
     </nav>
 
-    <!-- HEADER avec ID pour ancre -->
+    
     <header id="accueil" class="container">
         <div class="content">
             <span class="blur"></span>
@@ -51,7 +51,7 @@
         </div>
     </header>
 
-    <!-- SECTION FEATURES avec bonnes ancres et sémantique -->
+        <!--Section Part-->
     <section id="about" class="container">
         <h2 class="header">Mes compétences</h2>
         <div class="features">
@@ -70,18 +70,31 @@
                 <h4>Keith <i class="fa-regular fa-face-grin-beam" aria-hidden="true"></i></h4>
                 <p>Développeur web débutant passionné. HTML/CSS/JS + accessibilité web.</p>
             </article>
-            <article class="card">
-                <span>Patience s'il vous plaît !</span>
-                <h4>Mes autres passions</h4>
-                <p>Design Twitch, graphisme gaming</p>
-                <a href="#contact">Me contacter <i class="fa-solid fa-pencil"></i></a>
-            </article>
+
         </div>
     </section>
 
-    <!-- Sections vides pour ancres (à remplir plus tard) -->
-    <section id="services" class="container"><h2>Tarifs</h2><p>À venir...</p></section>
-    <section id="portfolio" class="container"><h2>Portfolio</h2><p>À venir...</p></section>
+    <section id="services" class="container"><h2>Projets</h2>
+  <div class="features">
+        <article class="card">
+            <span><i class="fa-solid fa-code" aria-hidden="true"></i> Projet 1</span>
+            <h4>Mon premier site</h4>
+            <p><a href="#">Voir <i class="fa-solid fa-arrow-right"></i></a></p>
+        </article>
+        <article class="card">
+            <span><i class="fa-solid fa-laptop" aria-hidden="true"></i> Projet 2</span>
+            <h4>Site responsive</h4>
+            <p><a href="#">Détails <i class="fa-solid fa-arrow-right"></i></a></p>
+        </article>
+        <article class="card">
+            <span><i class="fa-solid fa-paint-brush" aria-hidden="true"></i> Projet 3</span>
+            <h4>Design sombre</h4>
+            <p><a href="#">Voir <i class="fa-solid fa-arrow-right"></i></a></p>
+        </article>
+  </div>
+</section>
+
+
 
     <script src="script.js"></script>
 </body>
