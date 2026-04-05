@@ -48,3 +48,50 @@ function trapFocus(e) {
         closeMenu();
     }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  const contactForm = document.getElementById('contacts-form');
+  
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      console.log('Contact envoyé à Formspree');
+    });
+  }
+});
+
+/*document.addEventListener('DOMContentLoaded', function() {
+  const track = document.querySelector('.carousel-track');
+  const slides = document.querySelectorAll('.carousel-slide');
+  const prevBtn = document.querySelector('.carousel-prev');
+  const nextBtn = document.querySelector('.carousel-next');
+  const dots = document.querySelectorAll('.dot');
+  let currentSlide = 0;
+
+  function updateCarousel() {
+    track.style.transform = `translateX(-${currentSlide * 100}%)`;
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[currentSlide].classList.add('active');
+  }
+
+  nextBtn.addEventListener('click', () => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    updateCarousel();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    updateCarousel();
+  });
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      currentSlide = index;
+      updateCarousel();
+    });
+  });
+
+  setInterval(() => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    updateCarousel();
+  }, 4000);
+});*/

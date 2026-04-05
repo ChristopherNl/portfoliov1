@@ -8,7 +8,6 @@
     <title>Portfolio Keith - Web Developer</title>
 </head>
 <body>
-    
     <nav role="navigation" aria-label="Navigation principale">
         <div class="nav-logo">
             <a href="#accueil" aria-label="Accueil">
@@ -18,83 +17,91 @@
 
         <ul class="nav-links" id="navLinks" role="menubar" hidden>
             <li class="links"><a href="index.html">Accueil</a></li>
-            <li class="links"><a href="Travaux.html">Mes Projets</a></li>
+            <li class="links"><a href="travaux.html">Mes autres projets</a></li>
             <li class="links"><a href="#portfolio">À propos</a></li>
-            <!--- <li class="links"><a href="#services">Tarifs</a></li> -->  
+            <li class="links"><a href="contacts.html">Contacts</a></li>
         </ul>
-        
-        <a href="#contact" class="btn" aria-label="Me contacter">ME CONTACTER</a>
 
-        <button class="menu-toggle" id="menuToggle" 
-                aria-expanded="false" 
-                aria-controls="navLinks" 
+        <a href="contacts.html" class="btn" aria-label="Me contacter">ME CONTACTER</a>
+
+        <button class="menu-toggle" id="menuToggle"
+                aria-expanded="false"
+                aria-controls="navLinks"
                 aria-label="Ouvrir le menu de navigation">
             <i class="fa-solid fa-bars icon-open" aria-hidden="true"></i>
             <i class="fa-solid fa-xmark icon-close" aria-hidden="true"></i>
         </button>
     </nav>
 
-    
     <header id="accueil" class="container">
         <div class="content">
             <span class="blur"></span>
             <span class="blur"></span>
-            <h4>CRÉE TON SITE</h4>
-            <h1>Salut, je suis <span>Keith</span>, futur Web Developer</h1>
+            <h1>Bonjour, moi c'est <span>Christopher Noel</span></h1>
             <p>
-                En apprentissage autodidacte via AsmrProg. Passionné par le front-end responsive, accessible et design sombre.
+                En apprentissage autodidacte, passionné de jeux vidéo et de développement web, design et bien d'autres.
             </p>
             <a href="#services" class="btn">DÉMARRER</a>
-        </div> 
+        </div>
         <div class="image">
-            <img src="img/The Dark Mother's Embrace_ Exploring Lilith's Dream Realm.jpg" alt="Portrait Keith développeur">
+            <img src="img/The Dark Mother's Embrace_ Exploring Lilith's Dream Realm.jpg" alt="Portrait de Christopher Noel">
         </div>
     </header>
 
-        <!--Section Part-->
-    <section id="about" class="container">
-        <h2 class="header">Mes compétences</h2>
+    <section id="services" class="container">
+        <h2>Projets</h2>
         <div class="features">
-            <article class="card">
-                <span><i class="fa-solid fa-lines-leaning" aria-hidden="true"></i> Formation YouTube</span>
-                <h4>J'apprends avec <a href="https://www.youtube.com/@AsmrProg" target="_blank" rel="noopener"><span>AsmrProg</span></a> <i class="fa-brands fa-square-youtube"></i></h4>
-                <p><a href="https://www.youtube.com/@AsmrProg" target="_blank" rel="noopener">Voir sa chaîne</a></p>
-            </article>
-            <article class="card">
-                <span><i class="fa-solid fa-lines-leaning" aria-hidden="true"></i> En apprentissage</span>
-                <h4>Responsive & Accessible</h4>
-                <p>Mes projets <a href="#portfolio">ici <i class="fa-solid fa-arrow-left-long"></i></a></p>
-            </article>
-            <article class="card">
-                <span><i class="fa-solid fa-lines-leaning" aria-hidden="true"></i> Qui suis-je ?</span>
-                <h4>Keith <i class="fa-regular fa-face-grin-beam" aria-hidden="true"></i></h4>
-                <p>Développeur web débutant passionné. HTML/CSS/JS + accessibilité web.</p>
+            <!-- Projet loop infini -->
+            <article class="card projet-loop">
+                <div class="loop-container">
+                    <div class="loop-track">
+                        <div class="loop-slide">
+                            <img src="img/Weather-app.png" alt="Weather App Paris">
+                        </div>
+                        <div class="loop-slide">
+                            <img src="img/Weather-app-tokyo.png" alt="Weather App Tokyo">
+                        </div>
+                        <div class="loop-slide">
+                            <img src="img/Weather-app-sri-lanka.png" alt="Weather App Sri Lanka">
+                        </div>
+                        <div class="loop-slide">
+                            <img src="img/Weather-app.png" alt="Weather App Paris">
+                        </div>
+                        <div class="loop-slide">
+                            <img src="img/Weather-app-tokyo.png" alt="Weather App Tokyo">
+                        </div>
+                        <div class="loop-slide">
+                            <img src="img/Weather-app-sri-lanka.png" alt="Weather App Sri Lanka">
+                        </div>
+                    </div>
+                </div>
+                <span><i class="fa-solid fa-cloud-sun-rain"></i> WEATHER APP</span>
+                <h4>Application Météo JS</h4>
+                <p>Paris, Tokyo, Sri Lanka. API OpenWeather</p>
+                <div class="projet-links">
+                    <a href="#" class="btn-projet">Live <i class="fa-solid fa-eye"></i></a>
+                    <a href="#" class="btn-github">GitHub <i class="fa-brands fa-github"></i></a>
+                </div>
             </article>
 
+            <!-- Projet 2 -->
+            <article class="card">
+                <span><i class="fa-solid fa-laptop"></i> Projet 2</span>
+                <h4>Site responsive</h4>
+                <p><a href="#">Détails <i class="fa-solid fa-arrow-right"></i></a></p>
+            </article>
+
+            <!-- Projet 3 -->
+            <article class="card">
+                <span><i class="fa-solid fa-paint-brush"></i> Projet 3</span>
+                <h4>Design sombre</h4>
+                <p><a href="#">Voir <i class="fa-solid fa-arrow-right"></i></a></p>
+            </article>
         </div>
     </section>
 
-    <section id="services" class="container"><h2>Projets</h2>
-  <div class="features">
-        <article class="card">
-            <span><i class="fa-solid fa-code" aria-hidden="true"></i> Projet 1</span>
-            <h4>Mon premier site</h4>
-            <p><a href="#">Voir <i class="fa-solid fa-arrow-right"></i></a></p>
-        </article>
-        <article class="card">
-            <span><i class="fa-solid fa-laptop" aria-hidden="true"></i> Projet 2</span>
-            <h4>Site responsive</h4>
-            <p><a href="#">Détails <i class="fa-solid fa-arrow-right"></i></a></p>
-        </article>
-        <article class="card">
-            <span><i class="fa-solid fa-paint-brush" aria-hidden="true"></i> Projet 3</span>
-            <h4>Design sombre</h4>
-            <p><a href="#">Voir <i class="fa-solid fa-arrow-right"></i></a></p>
-        </article>
-  </div>
-</section>
-
-
+    <!-- Ici tu peux ajouter une section id="contact" plus tard -->
+    <!-- <section id="contact">...</section> -->
 
     <script src="script.js"></script>
 </body>

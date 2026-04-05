@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacts</title>
+  <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <nav role="navigation" aria-label="Navigation principale">
+        <div class="nav-logo">
+            <a href="#accueil" aria-label="Accueil">
+                <img src="img/logosite.jpg" alt="Logo Keith Web Developer">
+            </a>
+        </div>
+
+        <ul class="nav-links" id="navLinks" role="menubar" hidden>
+            <li class="links"><a href="index.html">Accueil</a></li>
+            <li class="links"><a href="Travaux.html">Mes autres prrojets</a></li>
+            <li class="links"><a href="#portfolio">À propos</a></li>
+            <li class="links"><a href="contacts.html">Contacts</a></li>
+            <!--- <li class="links"><a href="#services">Tarifs</a></li> -->  
+        </ul>
+        
+        <a href="#contact" class="btn" aria-label="Me contacter">ME CONTACTER</a>
+
+        <button class="menu-toggle" id="menuToggle" 
+                aria-expanded="false" 
+                aria-controls="navLinks" 
+                aria-label="Ouvrir le menu de navigation">
+            <i class="fa-solid fa-bars icon-open" aria-hidden="true"></i>
+            <i class="fa-solid fa-xmark icon-close" aria-hidden="true"></i>
+        </button>
+    </nav>
+  
+  <main class="contacts-container">
+    <h1 class="contacts-title">CONTACT</h1>
+    
+    <section class="contacts-section">
+      <h2 class="contacts-subtitle">Envoyez‑moi un message</h2>
+      
+      <form id="contacts-form" action="https://formspree.io/f/mjgpjbqj" method="POST">
+        <label for="contacts-prenom" class="contacts-label">Prénom</label>
+        <input type="text" id="contacts-prenom" name="prenom" class="contacts-input" placeholder="Votre prénom" required>
+        
+        <label for="contacts-nom" class="contacts-label">Nom</label>
+        <input type="text" id="contacts-nom" name="nom" class="contacts-input" placeholder="Votre nom" required>
+        
+        <label for="contacts-email" class="contacts-label">Email</label>
+        <input type="email" id="contacts-email" name="email" class="contacts-input" placeholder="votre@email.com" required>
+        
+        <label for="contacts-message" class="contacts-label">Message</label>
+        <textarea id="contacts-message" name="message" class="contacts-textarea" placeholder="Dites‑moi tout..." rows="6" required></textarea>
+        
+        <button type="submit" class="contacts-button">Envoyer le message</button>
+      </form>
+      
+      <div id="contacts-success" class="contacts-success">
+        <h3>✅ Message envoyé !</h3>
+        <p>Je vous répondrai rapidement.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
