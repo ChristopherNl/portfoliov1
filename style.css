@@ -283,14 +283,16 @@ section#services {
 }
 
 .loop-slide {
-    flex: 0 0 100%;
+    flex: 0 0 33.333%;          /* 1/3 de la largeur totale */
     min-width: 0;
+    width: 100%;
 }
 
 .loop-track {
     display: flex;
+    width: 300%;              /* 3 slides * 100% */
     height: 100%;
-    animation: loop-infinite 30s linear infinite;
+    animation: loop-infinite 18s linear infinite;
     will-change: transform;
 }
 
@@ -328,7 +330,7 @@ section#services {
 
 @keyframes loop-infinite {
     0%   { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    100% { transform: translateX(-66.666%); }
 }
 
 .projet-loop:hover .loop-track {
