@@ -72,13 +72,13 @@ document.addEventListener('DOMContentLoaded', function() {
 // 1. Données de tes projets
 const projectData = {
     project1: {
-        title: "Projet 1",
+        title: "Twitch projets",
           media: [
             { type: "image", src: "img/Overlays Jinx.png" },
             { type: "video", src: "img/Overlay game.mp4" },
-            { type: "image", src: "img/travail1-2.png" }
+            { type: "video", src: "img/panels-twitch.mp4" }
         ],
-        description: "Description détaillée de ton projet 1..."
+        description: "Voici des Overlays et panneaux (twitch panels) créés sur Canvas et Clipchamp par mes soins"
     },
     project2: {
         title: "Projet 2",

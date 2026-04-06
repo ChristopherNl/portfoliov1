@@ -774,6 +774,12 @@ section#services {
     color: #ffffff;
     font-size: 0.95rem;
 }
+.modal-description p {
+    padding: 1rem 1.5rem 2rem;
+    color: #ffffff;
+    font-size: 0.95rem;
+    line-height: 1.8;   /* meilleure lisibilité */
+}
 
 .modal-description h4 {
     margin-bottom: 0.75rem;
