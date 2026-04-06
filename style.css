@@ -255,7 +255,7 @@ section#services {
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    height: 100%;  /* Cartes égales */
+    height: 100%;  
 }
 
 .projet-loop .loop-container {
@@ -267,7 +267,7 @@ section#services {
     flex-shrink: 0;
 }
 
-/* 2. Slide = 100 % de la largeur */
+
 .loop-slide {
     flex: 0 0 100%;
     min-width: 0;
