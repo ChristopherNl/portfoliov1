@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=1.5">
+    <link rel="stylesheet" href="style.css?v=1.6">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon-180x180.png">
@@ -15,7 +15,7 @@
     <nav role="navigation" aria-label="Navigation principale">
         <div class="nav-logo">
             <a href="#accueil" aria-label="Accueil">
-                <img src="img/logosite.jpg" alt="Logo Keith Web Developer">
+                <img src="img/favicon-120x120.png" alt="Logo Keith Web Developer">
             </a>
         </div>
 
@@ -41,46 +41,50 @@
         <div class="content">
             <span class="blur"></span>
             <span class="blur"></span>
-            <h1>Bonjour, moi c'est <span>Christopher Noel</span></h1>
+            <h1>Bonjour moi c'est <span>Christopher Noel</span></h1>
             <p>
                 En apprentissage autodidacte, passionné de jeux vidéo et de développement web, design et bien d'autres....
             </p>
             <a href="#services" class="btn">DÉMARRER</a>
         </div>
         <div class="image">
-            <img src="img/The Dark Mother's Embrace_ Exploring Lilith's Dream Realm.jpg" alt="Portrait de Christopher Noel">
+            <img src="img/pexels-ramonkaphotography-900x1200.jpg" alt="Portrait de Christopher Noel">
+            <p class="credit-artist">
+               Image  ; <a href="https://www.pexels.com/photo/gothic-cathedral-facade-in-dramatic-black-and-white-30717686/">photo by RAMON KAROLAN</a>
+            </p>
         </div>
+        <!--Photo by Ramon Karolan: https://www.pexels.com/photo/gothic-cathedral-facade-in-dramatic-black-and-white-30717686/-->
     </header>
-
+        <!--cards-->
     <section id="services" class="container">
-        <h2>Projets</h2>
+        <h2>Mes Projets</h2>
         <div class="features">
             <!-- Projet loop infini -->
            <article class="card projet-loop">
     <div class="loop-container">
         <div class="loop-track">
             <div class="loop-slide">
-                <img src="img/Weather-app.png" alt="Weather App Paris">
+                <img src="img/Weather-app-copy.png" alt="Weather App Paris">
             </div>
             <div class="loop-slide">
-                <img src="img/Weather-app-tokyo.png" alt="Weather App Tokyo">
+                <img src="img/Weather-app-tokyo-copy.png" alt="Weather App Tokyo">
             </div>
             <div class="loop-slide">
-                <img src="img/Weather-app-sri-lanka.png" alt="Weather App Sri Lanka">
+                <img src="img/Weather-app-sri-lanka-copy.png" alt="Weather App Sri Lanka">
             </div>
-            <!-- Clone exact des 3 premiers -->
+            
             <div class="loop-slide">
-                <img src="img/Weather-app.png" alt="Weather App Paris">
-            </div>
-            <div class="loop-slide">
-                <img src="img/Weather-app-tokyo.png" alt="Weather App Tokyo">
+                <img src="img/Weather-app-copy.png" alt="Weather App Paris">
             </div>
             <div class="loop-slide">
-                <img src="img/Weather-app-sri-lanka.png" alt="Weather App Sri Lanka">
+                <img src="img/Weather-app-tokyo-copy.png" alt="Weather App Tokyo">
+            </div>
+            <div class="loop-slide">
+                <img src="img/Weather-app-sri-lanka-copy.png" alt="Weather App Sri Lanka">
             </div>
         </div>
     </div>
-    <span><i class="fa-solid fa-cloud-sun-rain"></i> WEATHER APP</span>
+    <span><i class="fa-solid fa-cloud-sun-rain"></i> WEATHER – APP</span>
     <h4>Application Météo JS</h4>
     <p>Paris, Tokyo, Sri Lanka. API OpenWeather</p>
     <div class="projet-links">
@@ -100,21 +104,88 @@
 </article>
 
             <!-- Projet 2 -->
-            <article class="card">
-                <span><i class="fa-solid fa-laptop"></i> Projet 2</span>
-                <h4>Site responsive</h4>
-                <p><a href="#">Détails <i class="fa-solid fa-arrow-right"></i></a></p>
-            </article>
-
-            <!-- Projet 3 -->
-            <article class="card">
-                <span><i class="fa-solid fa-paint-brush"></i> Projet 3</span>
-                <h4>Design sombre</h4>
-                <p><a href="#">Voir <i class="fa-solid fa-arrow-right"></i></a></p>
-            </article>
+            <article class="card projet-loop projet2-loop">
+    <div class="loop-container">
+        <div class="loop-track">
+            <div class="loop-slide">
+                <img src="img/To-do-list-hero.png" alt="Projet 2 - Écran 1">
+            </div>
+            <div class="loop-slide">
+                <img src="img/To-do-list-t1.png" alt="Projet 2 - Écran 2">
+            </div>
+            <div class="loop-slide">
+                <img src="img/To-do-list-finish.png" alt="Projet 2 - Écran 3">
+            </div>
+            <!-- Clone -->
+            <div class="loop-slide">
+                <img src="img/To-do-list-hero.png" alt="Projet 2 - Écran 1">
+            </div>
+            <div class="loop-slide">
+                <img src="img/To-do-list-t1.png" alt="Projet 2 - Écran 2">
+            </div>
+            <div class="loop-slide">
+                <img src="img/To-do-list-finish.png" alt="Projet 2 - Écran 3">
+            </div>
         </div>
-    </section>
+    </div>
+    <span><i class="fa-solid fa-check"></i> TODO APP – JS</span>
+    <h4>TODO List en vanilla JS</h4>
+    <p>Ajout, suppression, marquer comme terminé, persistence dans le localstorage.</p>
+    <div class="projet-links">
+    <a href="https://christophernl.github.io/To-Do-List/" class="btn-projet" target="_blank">
+        Live <i class="fa-solid fa-eye"></i>
+    </a>
+    <a href="https://github.com/ChristopherNl/To-Do-List" class="btn-github" target="_blank">
+        GitHub <i class="fa-brands fa-github"></i>
+    </a>
+</div>
+</article>
+</section>
 
+<div class="see-more-projects">
+        <a href="travaux.html" class="btn btn-travaux">
+            Voir PLus
+          <img src="img/external.png" alt="" class="btn-icon">   
+        </a>
+</div>
+
+    <!--footer-->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <p>
+                <strong>Christopher Noel</strong>
+                <br>
+                Portfolio web – Développement, Design, Gaming
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <h4>Liens utiles</h4>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+                <li><a href="travaux.html">Autres projets</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-social">
+            <h4>Suivez-moi</h4>
+            <div class="social-icons">
+                <a href="https://github.com/ChristopherNl" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-copyright">
+        <p>&copy; 2026 Christopher Noel – Portfolio web. Tous droits réservés.</p>
+    </div>
+</footer>
     <!-- Ici tu peux ajouter une section id="contact" plus tard -->
     <!-- <section id="contact">...</section> -->
 
