@@ -89,6 +89,27 @@ nav {
 .nav-links .links a:focus::after {
     width: 75%;
 }
+        /*icon*/
+.favicon-container {
+    display: none; /* Invisible */
+}
+
+.favicon-fallback {
+    --icon-size: clamp(16px, 3vw, 32px);
+    width: var(--icon-size);
+    height: var(--icon-size);
+    background: url("favicon.ico") center/contain no-repeat;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+@supports not (display: none) {
+    .favicon-container {
+        position: fixed;
+        top: -9999px; /* Chargé sans visible */
+    }
+}
+
 
 /* Bouton principal */
 .btn {
@@ -219,79 +240,58 @@ section#services {
 }
 
 /* Section Projets / Cartes – ALIGNÉES (effets ORIGINAUX) */
+/* FEATURES + LOOP MOBILE ROBUSTE */
 .features {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ton original */
-    gap: 2rem;  /* Ton original */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
     margin-top: 2rem;
-    align-items: start;  /* ← SEUL AJOUT pour aligner */
+    align-items: stretch;  /* Étire cartes égales */
 }
 
 .features .card {
     background: var(--red-mid);
-    padding: 1.5rem;  /* Ton original */
+    padding: 1.5rem;
     border-radius: 20px;
-    max-width: 320px; /* Ton original */
-    height: 100%;     /* ← SEUL AJOUT pour hauteur égale */
     display: flex;
     flex-direction: column;
-}
-
-.features .card:hover {
-    transform: translateY(-6px);  /* TON EFFET original */
-    box-shadow: 0 0 15px #7a1111; /* TON EFFET original */
-}
-
-
-/* Loop RÉPARÉE + centrage */
-
-.projet-loop {
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+    height: 100%;  /* Cartes égales */
 }
 
 .projet-loop .loop-container {
-    aspect-ratio: 0.625 / 1;
-    height: clamp(260px, 25vw, 340px);
-    margin: 0;
+     height: min(300px, 55vw);
+    width: 100%;
+    margin-bottom: 1rem;
     border-radius: 20px;
     overflow: hidden;
-    background: linear-gradient(90deg, #000 0%, #1a0000 100%);
-}
-
-.loop-track {
-    display: flex;
-    height: 100%;
-    animation: loop-infinite 25s linear infinite;
-}
-
-.loop-slide {
-    width: 100%;
-    height: 100%;
     flex-shrink: 0;
 }
 
+/* 2. Slide = 100 % de la largeur */
+.loop-slide {
+    flex: 0 0 100%;
+    min-width: 0;
+}
+
+/* 3. Track + ANIMATION */
+.loop-track {
+    display: flex;
+    height: 100%;
+    animation: loop-infinite 30s linear infinite;
+    will-change: transform;
+}
+
+/* 4. Images – légèrement dézoomées */
 .loop-slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 20%;
+    object-position: center;
+    transform: scale(0.96);
+    transform-origin: center;
 }
 
-@keyframes loop-infinite {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-}
-
-.projet-loop:hover .loop-track {
-    animation-play-state: paused;
-}
-
-/* CENTRAGE TEXTE + BOUTONS */
-
+/* 5. CENTRAGE TEXTE + BOUTONS */
 .projet-loop > span,
 .projet-loop > h4,
 .projet-loop > p {
@@ -314,32 +314,33 @@ section#services {
     gap: 1rem;
     justify-content: center;
 }
-/* ← KEYFRAME MANQUANT */
+
+/* 6. KEYFRAME LOOP */
 @keyframes loop-infinite {
     0%   { transform: translateX(0); }
     100% { transform: translateX(-50%); }
 }
 
+/* 7. PAUSE AU HOVER */
 .projet-loop:hover .loop-track {
     animation-play-state: paused;
 }
 
-/* RESPONSIVE 500x800 */
-@media (max-width: 1024px) {
-    .projet-loop .loop-container {
-        height: 300px;
-        width: 187px;
+/* 8. DESKTOP – un peu moins zoomé */
+@media (min-width: 769px) {
+    .loop-slide img {
+        transform: scale(0.95);
+        transform-origin: center;
     }
 }
 
-@media (max-width: 820px) {
-    .projet-loop .loop-container {
-        height: 260px;
-        width: 162px;
+/* 9. MOBILE TRES ETROIT */
+@media (max-width: 480px) {
+    .loop-slide img {
+        object-fit: contain;
+        background-color: #18181b;
     }
-}
-
-/*  TRAVAUX  */
+}VAUX  */
 .travaux-galerie {
     padding: 2rem 0;
     background: linear-gradient(135deg, #18181b 0%, #2a0000 100%);
