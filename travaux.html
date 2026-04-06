@@ -11,10 +11,11 @@
     <title>Portfolio Keith - Web Developer</title>
 </head>
 <body>
+    <!-- NAVIGATION PRINCIPALE -->
     <nav role="navigation" aria-label="Navigation principale">
         <div class="nav-logo">
             <a href="#accueil" aria-label="Accueil">
-                <img src="img/logosite.jpg" alt="Logo Keith Web Developer">
+                <img src="img/favicon-120x120.png" alt="Logo Keith Web Developer">
             </a>
         </div>
 
@@ -23,10 +24,9 @@
             <li class="links"><a href="travaux.html">Mes autres projets</a></li>
             <li class="links"><a href="#portfolio">À propos</a></li>
             <li class="links"><a href="contacts.html">Contacts</a></li>
-            <!--- <li class="links"><a href="#services">Tarifs</a></li> -->
         </ul>
         
-        <a href="#contact" class="btn" aria-label="Me contacter">ME CONTACTER</a>
+        <a href="contacts.html" class="btn" aria-label="Me contacter">ME CONTACTER</a>
 
         <button class="menu-toggle" id="menuToggle" 
                 aria-expanded="false" 
@@ -37,104 +37,121 @@
         </button>
     </nav>
 
-    
-    <header id="accueil" class="container">
+    <!-- SECTION TRAVAUX (2×2 CARDS + MODAL) -->
+    <section class="travaux-galerie">
+        <div class="container">
+            <h2 class="header">Mes Travaux</h2>
 
-    </header>
+            <div class="travaux-cards-box">
+                <!-- Card 1 -->
+                <div class="travaux-card-box" data-project="project1">
+                    <div class="travaux-card-image">
+                        <img src="img/Overlays Jinx-900x1200.png" alt="Projet 1 - mini-preview">
+                    </div>
+                    <div class="travaux-card-text">
+                        <h4>Projet 1</h4>
+                        <p>Description courte du Projet 1.</p>
+                        <a href="#" class="btn open-project">Voir</a>
+                    </div>
+                </div>
 
-   <section class="travaux-galerie">
-    <div class="container">
-        <h2 class="header">Mes Travaux</h2>
-        <div class="travaux-cards-box">
-            <!-- Card 1 -->
-            <div class="travaux-card-box">
-                <div class="travaux-card-image">
-                    <img src="img/travail1.jpg" alt="Projet 1">
+                <!-- Card 2 -->
+                <div class="travaux-card-box" data-project="project2">
+                    <div class="travaux-card-image">
+                        <img src="img/travail2.jpg" alt="Projet 2 - mini-preview">
+                    </div>
+                    <div class="travaux-card-text">
+                        <h4>Projet 2</h4>
+                        <p>Description courte du Projet 2.</p>
+                        <a href="#" class="btn open-project">Voir</a>
+                    </div>
                 </div>
-                <div class="travaux-card-text">
-                    <h4>Projet 1</h4>
-                    <p>Description.</p>
-                    <a href="#" class="btn">Voir</a>
+
+                <!-- Card 3 -->
+                <div class="travaux-card-box" data-project="project3">
+                    <div class="travaux-card-image">
+                        <img src="img/3.jpg" alt="Projet 3 - mini-preview">
+                    </div>
+                    <div class="travaux-card-text">
+                        <h4>Projet 3</h4>
+                        <p>Texte 3.</p>
+                        <a href="#" class="btn open-project">Voir</a>
+                    </div>
                 </div>
-            </div>
-            
-            <!-- Card 2 -->
-            <div class="travaux-card-box">
-                <div class="travaux-card-image">
-                    <img src="img/travail2.jpg" alt="Projet 2">
-                </div>
-                <div class="travaux-card-text">
-                    <h4>Projet 2</h4>
-                    <p>Description.</p>
-                    <a href="#" class="btn">Voir</a>
-                </div>
-            </div>
-            
-            <!-- Card 3 -->
-            <div class="travaux-card-box">
-                <div class="travaux-card-image">
-                    <img src="img/3.jpg" alt="Projet 3">
-                </div>
-                <div class="travaux-card-text">
-                    <h4>Projet 3</h4>
-                    <p>Texte 3.</p>
-                    <a href="#" class="btn">Voir</a>
-                </div>
-            </div>
-            
-            <!-- Card 4 -->
-            <div class="travaux-card-box">
-                <div class="travaux-card-image">
-                    <img src="img/4.jpg" alt="Projet 4">
-                </div>
-                <div class="travaux-card-text">
-                    <h4>Projet 4</h4>
-                    <p>Texte 4.</p>
-                    <a href="#" class="btn">Voir</a>
+
+                <!-- Card 4 -->
+                <div class="travaux-card-box" data-project="project4">
+                    <div class="travaux-card-image">
+                        <img src="img/4.jpg" alt="Projet 4 - mini-preview">
+                    </div>
+                    <div class="travaux-card-text">
+                        <h4>Projet 4</h4>
+                        <p>Texte 4.</p>
+                        <a href="#" class="btn open-project">Voir</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<footer class="footer">
-    <div class="footer-container">
-        <div class="footer-brand">
-            <p>
-                <strong>Christopher Noel</strong>
-                <br>
-                Portfolio web – Développement, Design, Gaming
-            </p>
-        </div>
+    </section>
 
-        <div class="footer-links">
-            <h4>Liens utiles</h4>
-            <ul>
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="contacts.html">Contacts</a></li>
-                <li><a href="travaux.html">Autres projets</a></li>
-            </ul>
-        </div>
 
-        <div class="footer-social">
-            <h4>Suivez-moi</h4>
-            <div class="social-icons">
-                <a href="https://github.com/ChristopherNl" target="_blank" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="#" target="_blank" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                
+    <!-- POP-UP MODAL UNIQUE POUR LES 4 CARTES -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+
+            <div class="modal-slides">
+                <div class="slide"></div>
+                <div class="slide"></div>
+                <div class="slide"></div>
+            </div>
+
+            <div class="modal-description">
+                <h4></h4>
+                <p></p>
             </div>
         </div>
     </div>
 
-    <div class="footer-copyright">
-        <p>&copy; 2026 Christopher Noel – Portfolio web. Tous droits réservés.</p>
-    </div>
-</footer>
 
-<script src="script.js"></script>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <p>
+                    <strong>Christopher Noel</strong>
+                    <br>
+                    Portfolio web – Développement, Design, Gaming
+                </p>
+            </div>
 
+            <div class="footer-links">
+                <h4>Liens utiles</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="contacts.html">Contacts</a></li>
+                    <li><a href="travaux.html">Autres projets</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h4>Suivez-moi</h4>
+                <div class="social-icons">
+                    <a href="https://github.com/ChristopherNl" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            <p>&copy; 2026 Christopher Noel – Portfolio web. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
