@@ -803,7 +803,6 @@ section#services {
 .apropos-letter {
     padding: clamp(3rem, 6vw, 6rem) clamp(1rem, 4vw, 2rem) clamp(2rem, 4vw, 4rem);
     background: url("img/parchment-bg.png") center/contain no-repeat;
-    background-color: #0d0d0d;
     min-height: clamp(80vh, 90vh, 90vh);
     display: flex;
     flex-direction: column;
