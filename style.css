@@ -801,10 +801,10 @@ section#services {
 
 /* BLOC "Lettre" (à propos) */
 .apropos-letter {
-    padding: 6rem 2rem 4rem;     
+    padding: clamp(3rem, 6vw, 6rem) clamp(1rem, 4vw, 2rem) clamp(2rem, 4vw, 4rem);
     background: url("img/parchment-bg.png") center/contain no-repeat;
-    /*background-color: #0d0d0d;*/
-    min-height: 90vh;
+    background-color: #0d0d0d;
+    min-height: clamp(80vh, 90vh, 90vh);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -816,16 +816,19 @@ section#services {
     flex: 1;
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* titre + texte en haut */
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .letter-page {
-    max-width: 700px;
-    padding: 2rem;
+    max-width: clamp(500px, 70vw, 700px);
+    padding: clamp(1.5rem, 4vw, 2rem);
     color: #1a0f08;
     font-family: "Cormorant Garamond", serif;
     line-height: 1.7;
-    font-size: 1rem;
+    font-size: clamp(1rem, 3vw, 1.1rem);
     text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
     position: absolute;
     top: 0;
@@ -847,73 +850,96 @@ section#services {
 }
 
 @keyframes turnPage {
-    0% {
-        transform: translateX(-50%) rotateY(0deg);
-    }
-    50% {
-        transform: translateX(-50%) rotateY(-90deg) scale(0.9);
-    }
-    100% {
-        transform: translateX(-50%) rotateY(0deg);
-    }
+    0% { transform: translateX(-50%) rotateY(0deg); }
+    50% { transform: translateX(-50%) rotateY(-90deg) scale(0.9); }
+    100% { transform: translateX(-50%) rotateY(0deg); }
 }
 
 .letter-title {
     font-family: "Cinzel", serif;
     color: #3a1508;
-    font-size: 1.8rem;
-    margin: 3rem 0 1rem 0;
+    font-size: clamp(1.4rem, 4vw, 2.2rem); /* RÉDUIT : 1.8→1.4 | 2.8→2.2 */
+    margin: clamp(1.5rem, 4vw, 2.5rem) 0 clamp(0.8rem, 2.5vw, 1rem) 0; /* RÉDUIT */
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: clamp(0.8px, 0.25vw, 1.3px); /* RÉDUIT */
     text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
 }
 
 @keyframes float-soft {
     0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-8px); }
+    50% { transform: translateY(clamp(-6px, -1.5vw, -8px)); }
 }
 
 .turn-page-btn {
     position: relative;
-    padding: 1.2rem 2.5rem;
+    margin-top: clamp(2rem, 6vw, 3rem);
+    margin-left: auto;
+    margin-right: auto;
+    padding: clamp(1rem, 3vw, 1.2rem) clamp(2rem, 5vw, 2.5rem);
     background: linear-gradient(145deg, #fefae0 0%, #d6c8a2 100%);
-    border: 2px solid #8a0f06;
-    border-radius: 12px;
+    border: clamp(2px, 0.3vw, 2px) solid #8a0f06;
+    border-radius: clamp(8px, 2vw, 12px);
     color: #3a1508;
     font-family: "Cinzel", serif;
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 3.5vw, 1.1rem);
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: clamp(0.8px, 0.2vw, 1px);
     cursor: pointer;
+    display: block;
+    max-width: clamp(200px, 40vw, 300px);
+    animation: float-soft 3s ease-in-out infinite;
     transition: all 0.3s ease;
     box-shadow: 
-        0 4px 12px rgba(0, 0, 0, 0.2),
+        0 clamp(4px, 1vw, 4px) clamp(10px, 2vw, 12px) rgba(0, 0, 0, 0.2),
         inset 0 1px 0 rgba(255, 255, 255, 0.4);
     text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.3);
-    animation: float-soft 3s ease-in-out infinite;
 }
 
 .turn-page-btn::before {
     content: "";
     position: absolute;
     inset: -2px;
-    border-radius: 14px;
+    border-radius: inherit;
     border: 1px dashed #8a0f06;
     opacity: 0.6;
     pointer-events: none;
-
 }
 
 .turn-page-btn:hover {
     background: linear-gradient(145deg, #fffef8 0%, #fdfaf6 100%);
-    transform: translateY(-3px);
+    transform: translateY(clamp(-8px, -2vw, -12px)) scale(1.03) !important;
     box-shadow: 
-        0 6px 20px rgba(0, 0, 0, 0.3),
+        0 clamp(6px, 1.5vw, 6px) clamp(18px, 3vw, 20px) rgba(0, 0, 0, 0.3),
         inset 0 1px 0 rgba(255, 255, 255, 0.6);
     border-color: #570303;
-    animation-play-state: paused; /* stoppe au hover */
-    transform: translateY(-12px) scale(1.03) !important;
+    animation-play-state: paused;
 }
 
+/* Media queries additionnelles pour petits écrans */
+@media (max-width: 768px) {
+    .apropos-letter {
+        background-size: cover;
+        background-position: center top;
+        padding: clamp(2rem, 8vw, 4rem) 1rem;
+    }
+    
+    .letter-wrapper {
+        justify-content: center;
+    }
+    
+    .letter-page {
+        padding: clamp(1rem, 5vw, 1.5rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .apropos-letter {
+        min-height: 85vh;
+    }
+    
+    .turn-page-btn {
+        width: 85%;
+    }
+}
 
