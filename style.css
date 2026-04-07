@@ -810,6 +810,7 @@ section#services {
     align-items: center;
     text-align: center;
     position: relative;
+    background-size: contain;
 }
 
 .letter-wrapper {
@@ -919,10 +920,11 @@ section#services {
 /* Media queries additionnelles pour petits écrans */
 @media (max-width: 768px) {
     .apropos-letter {
-        background-size: cover;
+        background-size: 90vw auto; /* largeur 90% écran */
         background-position: center top;
-        padding: clamp(2rem, 8vw, 4rem) 1rem;
+        padding-top: clamp(4rem, 12vw, 6rem); /* + espace haut */
     }
+
     
     .letter-wrapper {
         justify-content: center;
@@ -935,11 +937,8 @@ section#services {
 
 @media (max-width: 480px) {
     .apropos-letter {
-        min-height: 85vh;
-    }
-    
-    .turn-page-btn {
-        width: 85%;
+        background-size: 85vw auto; /* encore plus petite */
+        padding-top: clamp(5rem, 15vw, 7rem);
     }
 }
 
