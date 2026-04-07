@@ -188,10 +188,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+
 document.addEventListener("DOMContentLoaded", () => {
     const pages = document.querySelectorAll(".letter-page");
     const turnBtn = document.querySelector(".turn-page-btn");
     let currentPage = 0;
+    const totalPages = pages.length;
 
     turnBtn.addEventListener("click", () => {
         // Masquer page actuelle
@@ -199,7 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
         pages[currentPage].classList.add("turning");
         
         // Passer à la page suivante
-        currentPage = currentPage === 0 ? 1 : 0;
+        currentPage = (currentPage +1) % totalPages;
         
         // Afficher nouvelle page après animation
         setTimeout(() => {
