@@ -798,3 +798,122 @@ section#services {
         width: 90vw;
     }
 }
+
+/* BLOC "Lettre" (à propos) */
+.apropos-letter {
+    padding: 6rem 2rem 4rem;     
+    background: url("img/parchment-bg.png") center/contain no-repeat;
+    /*background-color: #0d0d0d;*/
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.letter-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* titre + texte en haut */
+}
+
+.letter-page {
+    max-width: 700px;
+    padding: 2rem;
+    color: #1a0f08;
+    font-family: "Cormorant Garamond", serif;
+    line-height: 1.7;
+    font-size: 1rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.letter-page.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) rotateY(0deg);
+}
+
+.letter-page.turning {
+    animation: turnPage 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes turnPage {
+    0% {
+        transform: translateX(-50%) rotateY(0deg);
+    }
+    50% {
+        transform: translateX(-50%) rotateY(-90deg) scale(0.9);
+    }
+    100% {
+        transform: translateX(-50%) rotateY(0deg);
+    }
+}
+
+.letter-title {
+    font-family: "Cinzel", serif;
+    color: #3a1508;
+    font-size: 1.8rem;
+    margin: 3rem 0 1rem 0;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
+@keyframes float-soft {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+}
+
+.turn-page-btn {
+    position: relative;
+    padding: 1.2rem 2.5rem;
+    background: linear-gradient(145deg, #fefae0 0%, #d6c8a2 100%);
+    border: 2px solid #8a0f06;
+    border-radius: 12px;
+    color: #3a1508;
+    font-family: "Cinzel", serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 
+        0 4px 12px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.3);
+    animation: float-soft 3s ease-in-out infinite;
+}
+
+.turn-page-btn::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 14px;
+    border: 1px dashed #8a0f06;
+    opacity: 0.6;
+    pointer-events: none;
+
+}
+
+.turn-page-btn:hover {
+    background: linear-gradient(145deg, #fffef8 0%, #fdfaf6 100%);
+    transform: translateY(-3px);
+    box-shadow: 
+        0 6px 20px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    border-color: #570303;
+    animation-play-state: paused; /* stoppe au hover */
+    transform: translateY(-12px) scale(1.03) !important;
+}
+
+

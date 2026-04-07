@@ -188,6 +188,27 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const pages = document.querySelectorAll(".letter-page");
+    const turnBtn = document.querySelector(".turn-page-btn");
+    let currentPage = 0;
+
+    turnBtn.addEventListener("click", () => {
+        // Masquer page actuelle
+        pages[currentPage].classList.remove("active");
+        pages[currentPage].classList.add("turning");
+        
+        // Passer à la page suivante
+        currentPage = currentPage === 0 ? 1 : 0;
+        
+        // Afficher nouvelle page après animation
+        setTimeout(() => {
+            pages[currentPage].classList.add("active");
+            pages[currentPage].classList.remove("turning");
+        }, 500);
+    });
+});
+
 /*document.addEventListener('DOMContentLoaded', function() {
   const track = document.querySelector('.carousel-track');
   const slides = document.querySelectorAll('.carousel-slide');
