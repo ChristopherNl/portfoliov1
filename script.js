@@ -1,6 +1,23 @@
-/* -----------------------------
-   NAVIGATION MOBILE + ACCESSIBILITY
-   ----------------------------- */
+document.addEventListener("DOMContentLoaded", () => {
+  // Cible TOUTES les vidéos dans les .travaux-card-box
+  const cardVideos = document.querySelectorAll('.travaux-card-box video');
+  
+  cardVideos.forEach((video, index) => {
+    video.muted = true;
+    video.loop = true;
+    video.playsInline = true;
+    video.style.width = '100%';
+    video.style.height = '100%';
+    video.style.objectFit = 'cover';
+    
+    // Play avec feedback console
+    video.play().then(() => {
+      console.log(`✅ Vidéo card ${index + 1} joue !`);
+    }).catch(e => {
+      console.error(`❌ Vidéo card ${index + 1} bloquée:`, e.message);
+    });
+  });
+});
 const toggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
 
@@ -81,28 +98,31 @@ const projectData = {
         description: "Voici des Overlays et panneaux (twitch panels) créés sur Canvas et Clipchamp par mes soins"
     },
     project2: {
-        title: "Projet 2",
-        images: [
-            "img/travail2-1.png",
-            "img/travail2-2.png"
+        title: "Apprentissage Node.js",
+         media: [
+            { type: "image", src: "img/A venir.jpg" },
+            { type: "image", src: "img/A venir.jpg" },
+            { type: "image", src: "img/A venir.jpg" }
         ],
-        description: "Description détaillée de ton projet 2."
+        description: "A venir.."
     },
      project3: {
-        title: "Projet 3",
-        images: [
-            "img/3-1.png",
-            "img/3-2.png"
+        title: "A venir...",
+       media: [
+            { type: "image", src: "img/A venir.jpg" },
+            { type: "image", src: "img/A venir.jpg" },
+            { type: "image", src: "img/A venir.jpg" }
         ],
-        description: "Description détaillée de ton projet 3."
+        description: "A venir.."
     },
     project4: {
-        title: "Projet 4",
-        images: [
-            "img/4-1.png",
-            "img/4-2.png"
+        title: "A venir...",
+       media: [
+            { type: "image", src: "img/A venir.jpg" },
+            { type: "image", src: "img/A venir.jpg" },
+            { type: "image", src: "img/A venir.jpg" }
         ],
-        description: "Description détaillée de ton projet 4."
+        description: "A venir.."
     }
 };
 
