@@ -285,6 +285,10 @@ section#services { margin-top: 2rem; }
     height: 100%;
 }
 
+.features .card .fa-eye:hover {
+    color: black; /* ou white */
+}
+
 .projet-loop .loop-container {
     height: min(300px, 55vw);
     width: 100%;
@@ -330,6 +334,14 @@ section#services { margin-top: 2rem; }
     gap: 1rem;
     justify-content: center;
 }
+
+.projet-links a {
+    color: #000000;
+}
+
+
+
+
 
 .projet-loop:hover .loop-track { animation-play-state: paused; }
 
