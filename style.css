@@ -134,7 +134,7 @@ header .content h1 {
 
 header .content h1 span {
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 1px #8a0f06;
+    -webkit-text-stroke: 1px  #8a0f06;
     text-shadow: 0 0 5px var(--red-dark), 0 0 10px #470202;
 }
 
@@ -147,7 +147,7 @@ header .image img {
     width: min(80%, 420px);
     margin-inline: auto;
     border-radius: 12px;
-    box-shadow: 0 0 10px #7a1111, 0 0 20px #740202;
+    box-shadow: 0 0 10px #540212, 0 0 20px #540212;
     transition: transform 0.4s ease;
 }
 
@@ -160,7 +160,8 @@ header .image img:hover { transform: scale(1.1); }
     padding: 1rem 2rem;
     font-size: 1rem;
     color: #fff;
-    background-color: var(--red-dark);
+    text-shadow: #540212;
+    background-color: #540212;
     border-radius: 25px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -177,7 +178,7 @@ header .image img:hover { transform: scale(1.1); }
     padding: 1rem 2.5rem;
     font-size: 1.1rem;
     color: #fff;
-    background-color: var(--red-bright);
+    background-color: var(--red-dark);
     border-radius: 25px;
     border: none;
     cursor: pointer;
@@ -215,7 +216,7 @@ header .image img:hover { transform: scale(1.1); }
     display: none;
     place-items: center;
     font-size: 1.6rem;
-    color: #fff;
+    color: #540212;
     cursor: pointer;
     border-radius: 50%;
     background: rgba(24, 24, 27, 0.6);
@@ -233,7 +234,7 @@ header .image img:hover { transform: scale(1.1); }
     height: 100%;
     display: grid;
     place-items: center;
-    transition: 0.3s ease;
+    transition: 0.3s ease  transform 0.3s ease;
 }
 
 .menu-toggle .icon-close {
@@ -276,7 +277,7 @@ section#services { margin-top: 2rem; }
 }
 
 .features .card {
-    background: var(--red-mid);
+    background: #540212;
     padding: 1.5rem;
     border-radius: 20px;
     display: flex;
@@ -668,6 +669,20 @@ section#services { margin-top: 2rem; }
     hyphens: auto;
     padding: 0;
     opacity: 1;
+}
+
+.letter-content ol {
+    position: relative;
+    list-style-type: disc;
+    margin-left: 1.5em;
+    color: #333;
+}
+
+.letter-content ol li{
+    font-weight:800;
+    margin-bottom: 0.5em;
+    color: #281407;
+
 }
 
 .turn-page-btn {
